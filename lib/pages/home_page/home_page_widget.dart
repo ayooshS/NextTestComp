@@ -57,46 +57,43 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           top: true,
           child: Align(
             alignment: const AlignmentDirectional(0.0, 0.0),
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  wrapWithModel(
-                    model: _model.smBtnPrimaryModel,
-                    updateCallback: () => setState(() {}),
-                    child: SmBtnPrimaryWidget(
-                      btnText: 'ccsdsd',
-                      icon: Icon(
-                        Icons.sixty_fps_outlined,
-                        color: FlutterFlowTheme.of(context).btnColor,
-                        size: 12.0,
-                      ),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                wrapWithModel(
+                  model: _model.smBtnPrimaryModel,
+                  updateCallback: () => setState(() {}),
+                  child: SmBtnPrimaryWidget(
+                    btnText: 'ccsdsd',
+                    icon: Icon(
+                      Icons.sixty_fps_outlined,
+                      color: FlutterFlowTheme.of(context).btnColor,
+                      size: 12.0,
                     ),
                   ),
-                  wrapWithModel(
-                    model: _model.smBtnDefaultModel,
-                    updateCallback: () => setState(() {}),
-                    child: const SmBtnDefaultWidget(),
-                  ),
-                  wrapWithModel(
-                    model: _model.smBtnBezeledModel,
-                    updateCallback: () => setState(() {}),
-                    child: const SmBtnBezeledWidget(),
-                  ),
-                  wrapWithModel(
-                    model: _model.smBtnLinkModel,
-                    updateCallback: () => setState(() {}),
-                    child: const SmBtnLinkWidget(),
-                  ),
-                  wrapWithModel(
-                    model: _model.smBtnDisabledModel,
-                    updateCallback: () => setState(() {}),
-                    child: const SmBtnDisabledWidget(),
-                  ),
-                ].divide(const SizedBox(height: 24.0)),
-              ),
+                ),
+                wrapWithModel(
+                  model: _model.smBtnDefaultModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SmBtnDefaultWidget(),
+                ),
+                wrapWithModel(
+                  model: _model.smBtnBezeledModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SmBtnBezeledWidget(),
+                ),
+                wrapWithModel(
+                  model: _model.smBtnLinkModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SmBtnLinkWidget(),
+                ),
+                wrapWithModel(
+                  model: _model.smBtnDisabledModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SmBtnDisabledWidget(),
+                ),
+              ].divide(const SizedBox(height: 24.0)),
             ),
           ),
         ),

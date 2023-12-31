@@ -56,7 +56,7 @@ class _SmBtnPrimaryWidgetState extends State<SmBtnPrimaryWidget> {
       options: FFButtonOptions(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
         iconPadding: const EdgeInsets.all(0.0),
-        color: const Color(0xFFAA58F4),
+        color: FlutterFlowTheme.of(context).pPrimary,
         textStyle: FlutterFlowTheme.of(context).labelMedium.override(
               fontFamily: 'Nunito',
               color: FlutterFlowTheme.of(context).btnColor,
