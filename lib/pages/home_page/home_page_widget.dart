@@ -1,3 +1,7 @@
+import '/buttons/sm_btn/sm_btn_bezeled/sm_btn_bezeled_widget.dart';
+import '/buttons/sm_btn/sm_btn_default/sm_btn_default_widget.dart';
+import '/buttons/sm_btn/sm_btn_disabled/sm_btn_disabled_widget.dart';
+import '/buttons/sm_btn/sm_btn_link/sm_btn_link_widget.dart';
 import '/buttons/sm_btn/sm_btn_primary/sm_btn_primary_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -49,24 +53,51 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
-        body: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              wrapWithModel(
-                model: _model.smBtnPrimaryModel,
-                updateCallback: () => setState(() {}),
-                child: SmBtnPrimaryWidget(
-                  btnText: 'ccsdsd',
-                  icon: Icon(
-                    Icons.sixty_fps_outlined,
-                    color: FlutterFlowTheme.of(context).btnColor,
-                    size: 12.0,
+        body: SafeArea(
+          top: true,
+          child: Align(
+            alignment: const AlignmentDirectional(0.0, 0.0),
+            child: Padding(
+              padding: const EdgeInsets.all(64.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  wrapWithModel(
+                    model: _model.smBtnPrimaryModel,
+                    updateCallback: () => setState(() {}),
+                    child: SmBtnPrimaryWidget(
+                      btnText: 'ccsdsd',
+                      icon: Icon(
+                        Icons.sixty_fps_outlined,
+                        color: FlutterFlowTheme.of(context).btnColor,
+                        size: 12.0,
+                      ),
+                    ),
                   ),
-                ),
+                  wrapWithModel(
+                    model: _model.smBtnDefaultModel,
+                    updateCallback: () => setState(() {}),
+                    child: const SmBtnDefaultWidget(),
+                  ),
+                  wrapWithModel(
+                    model: _model.smBtnBezeledModel,
+                    updateCallback: () => setState(() {}),
+                    child: const SmBtnBezeledWidget(),
+                  ),
+                  wrapWithModel(
+                    model: _model.smBtnLinkModel,
+                    updateCallback: () => setState(() {}),
+                    child: const SmBtnLinkWidget(),
+                  ),
+                  wrapWithModel(
+                    model: _model.smBtnDisabledModel,
+                    updateCallback: () => setState(() {}),
+                    child: const SmBtnDisabledWidget(),
+                  ),
+                ].divide(const SizedBox(height: 24.0)),
               ),
-            ].divide(const SizedBox(height: 24.0)),
+            ),
           ),
         ),
       ),
