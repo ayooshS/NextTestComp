@@ -58,7 +58,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           child: Align(
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: const EdgeInsets.all(64.0),
+              padding: const EdgeInsets.all(18.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,

@@ -44,10 +44,12 @@ class _SmBtnPrimaryWidgetState extends State<SmBtnPrimaryWidget> {
   @override
   Widget build(BuildContext context) {
     return
-        // cddcdcdcdccddc
+        // dssddsdsdsddsdsds
+        // dssddsdsdsddsdsds
+        // dssddsdsdsddsdsds
         FFButtonWidget(
       onPressed: () {
-        print('Button pressed ...');
+        print('SmBtnPrimar pressed ...');
       },
       text: widget.btnText,
       icon: widget.icon,
