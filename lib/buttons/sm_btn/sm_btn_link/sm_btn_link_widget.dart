@@ -55,7 +55,7 @@ class _SmBtnLinkWidgetState extends State<SmBtnLinkWidget> {
       options: FFButtonOptions(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
         iconPadding: const EdgeInsets.all(0.0),
-        color: const Color(0x00FFFFFF),
+        color: FlutterFlowTheme.of(context).accent3,
         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
               fontFamily: 'Nunito',
               color: const Color(0xFF0486FF),
