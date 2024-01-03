@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'snack_bar_def_widget.dart' show SnackBarDefWidget;
+import 's_b_semantic_widget.dart' show SBSemanticWidget;
 import 'package:flutter/material.dart';
 
-class SnackBarDefModel extends FlutterFlowModel<SnackBarDefWidget> {
+class SBSemanticModel extends FlutterFlowModel<SBSemanticWidget> {
   /// Initialization and disposal methods.
 
   @override

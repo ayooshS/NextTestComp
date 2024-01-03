@@ -1,3 +1,4 @@
+import '/button/md_btn/md_btn_default/md_btn_default_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/navigation/nav_bottom/nav_bottom/nav_bottom_widget.dart';
@@ -68,9 +69,15 @@ class _SourceWidgetState extends State<SourceWidget> {
           top: true,
           child: Stack(
             children: [
-              const Column(
+              Column(
                 mainAxisSize: MainAxisSize.max,
-                children: [],
+                children: [
+                  wrapWithModel(
+                    model: _model.mdBtnDefaultModel,
+                    updateCallback: () => setState(() {}),
+                    child: const MdBtnDefaultWidget(),
+                  ),
+                ],
               ),
               Align(
                 alignment: const AlignmentDirectional(0.0, 1.0),

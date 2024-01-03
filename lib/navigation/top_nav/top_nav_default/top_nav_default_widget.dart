@@ -1,5 +1,7 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/navigation/top_nav/top_nav_icon/initials/initials_widget.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'top_nav_default_model.dart';
@@ -8,13 +10,19 @@ export 'top_nav_default_model.dart';
 class TopNavDefaultWidget extends StatefulWidget {
   const TopNavDefaultWidget({
     super.key,
-    String? name,
-    String? buissInfo,
-  })  : name = name ?? 'Surender Kumar',
-        buissInfo = buissInfo ?? 'Add Buisness Info';
+    String? title,
+    String? subTitile,
+    this.icon1,
+    required this.icon2,
+    required this.icon3,
+  })  : title = title ?? 'Surender Kumar',
+        subTitile = subTitile ?? 'Add Buisness Info';
 
-  final String name;
-  final String buissInfo;
+  final String title;
+  final String subTitile;
+  final Widget? icon1;
+  final Widget? icon2;
+  final Widget? icon3;
 
   @override
   _TopNavDefaultWidgetState createState() => _TopNavDefaultWidgetState();
@@ -52,13 +60,13 @@ class _TopNavDefaultWidgetState extends State<TopNavDefaultWidget> {
           sigmaY: 7.0,
         ),
         child: Container(
-          width: 393.0,
+          width: double.infinity,
           height: 64.0,
           constraints: const BoxConstraints(
             maxHeight: 64.0,
           ),
-          decoration: const BoxDecoration(
-            color: Color(0xCDFFFFFF),
+          decoration: BoxDecoration(
+            color: FlutterFlowTheme.of(context).surfaceOverlay,
           ),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(16.0, 7.0, 16.0, 7.0),
@@ -69,21 +77,10 @@ class _TopNavDefaultWidgetState extends State<TopNavDefaultWidget> {
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Container(
-                      width: 36.0,
-                      height: 36.0,
-                      decoration: const BoxDecoration(
-                        color: Color(0x00FFFFFF),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
-                        child: Icon(
-                          Icons.face,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 24.0,
-                        ),
-                      ),
+                    wrapWithModel(
+                      model: _model.initialsModel,
+                      updateCallback: () => setState(() {}),
+                      child: const InitialsWidget(),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -93,24 +90,23 @@ class _TopNavDefaultWidgetState extends State<TopNavDefaultWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.name,
+                              widget.title,
                               style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
+                                  .headlineSmall
                                   .override(
                                     fontFamily: 'Nunito',
-                                    color: const Color(0xFF4E596B),
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.w600,
+                                    color:
+                                        FlutterFlowTheme.of(context).typeHigh,
                                   ),
                             ),
                             Text(
-                              widget.buissInfo,
+                              widget.subTitile,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Nunito',
-                                    color: const Color(0xFF5B687D),
-                                    fontSize: 16.0,
+                                    color:
+                                        FlutterFlowTheme.of(context).typeMedium,
                                   ),
                             ),
                           ],
@@ -119,25 +115,52 @@ class _TopNavDefaultWidgetState extends State<TopNavDefaultWidget> {
                     ),
                   ].divide(const SizedBox(width: 16.0)),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Icon(
-                      Icons.shopping_cart_outlined,
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
-                    ),
-                    Icon(
-                      Icons.shopping_cart_outlined,
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
-                    ),
-                    Icon(
-                      Icons.notifications_none,
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
-                    ),
-                  ].divide(const SizedBox(width: 8.0)),
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Align(
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: FlutterFlowIconButton(
+                          borderRadius: 0.0,
+                          borderWidth: 0.0,
+                          buttonSize: 40.0,
+                          icon: widget.icon1!,
+                          onPressed: () {
+                            print('IconButton pressed ...');
+                          },
+                        ),
+                      ),
+                      Align(
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 0.0,
+                          borderWidth: 0.0,
+                          buttonSize: 40.0,
+                          icon: widget.icon2!,
+                          onPressed: () {
+                            print('IconButton pressed ...');
+                          },
+                        ),
+                      ),
+                      Align(
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 0.0,
+                          borderWidth: 0.0,
+                          buttonSize: 40.0,
+                          icon: widget.icon3!,
+                          onPressed: () {
+                            print('IconButton pressed ...');
+                          },
+                        ),
+                      ),
+                    ].divide(const SizedBox(width: 8.0)),
+                  ),
                 ),
               ],
             ),

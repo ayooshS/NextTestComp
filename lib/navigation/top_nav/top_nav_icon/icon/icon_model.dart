@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'snack_bar_semantic_widget.dart' show SnackBarSemanticWidget;
+import 'icon_widget.dart' show IconWidget;
 import 'package:flutter/material.dart';
 
-class SnackBarSemanticModel extends FlutterFlowModel<SnackBarSemanticWidget> {
+class IconModel extends FlutterFlowModel<IconWidget> {
   /// Initialization and disposal methods.
 
   @override

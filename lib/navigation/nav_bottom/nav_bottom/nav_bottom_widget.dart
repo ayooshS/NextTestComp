@@ -72,65 +72,74 @@ class _NavBottomWidgetState extends State<NavBottomWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 16.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Container(
-                          width: 32.0,
-                          height: 32.0,
-                          decoration: const BoxDecoration(),
-                          child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: const Color(0x00FFFFFF),
-                              borderRadius: 0.0,
-                              borderWidth: 0.0,
-                              buttonSize: double.infinity,
-                              fillColor: const Color(0x00FFFFFF),
-                              icon: Icon(
-                                Icons.other_houses_outlined,
-                                color: widget.selectedPageIndex == 1
-                                    ? FlutterFlowTheme.of(context).corePrimary
-                                    : FlutterFlowTheme.of(context).typeLow,
-                                size: 20.0,
-                              ),
-                              onPressed: () async {
-                                context.goNamed(
-                                  'TestHomePage',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType: PageTransitionType.fade,
-                                      duration: Duration(milliseconds: 0),
-                                    ),
+              Align(
+                alignment: const AlignmentDirectional(0.0, 0.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 32.0,
+                              height: 32.0,
+                              decoration: const BoxDecoration(),
+                              child: Align(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                child: FlutterFlowIconButton(
+                                  borderColor: const Color(0x00FFFFFF),
+                                  borderRadius: 0.0,
+                                  borderWidth: 0.0,
+                                  buttonSize: double.infinity,
+                                  fillColor: const Color(0x00FFFFFF),
+                                  icon: Icon(
+                                    Icons.other_houses_outlined,
+                                    color: widget.selectedPageIndex == 1
+                                        ? FlutterFlowTheme.of(context)
+                                            .corePrimary
+                                        : FlutterFlowTheme.of(context).typeLow,
+                                    size: 20.0,
+                                  ),
+                                  onPressed: () async {
+                                    context.goNamed(
+                                      'TestHomePage',
+                                      extra: <String, dynamic>{
+                                        kTransitionInfoKey: const TransitionInfo(
+                                          hasTransition: true,
+                                          transitionType:
+                                              PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 0),
+                                        ),
+                                      },
+                                    );
                                   },
-                                );
-                              },
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'Home',
-                          style: FlutterFlowTheme.of(context)
-                              .bodySmall
-                              .override(
-                                fontFamily: 'Nunito',
-                                color: widget.selectedPageIndex == 1
-                                    ? FlutterFlowTheme.of(context).corePrimary
-                                    : FlutterFlowTheme.of(context).typeLow,
+                                ),
                               ),
+                            ),
+                            Text(
+                              'Home',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .override(
+                                    fontFamily: 'Nunito',
+                                    color: widget.selectedPageIndex == 1
+                                        ? FlutterFlowTheme.of(context)
+                                            .corePrimary
+                                        : FlutterFlowTheme.of(context).typeLow,
+                                  ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Column(
                 mainAxisSize: MainAxisSize.max,
