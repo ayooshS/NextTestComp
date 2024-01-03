@@ -56,11 +56,7 @@ class _SmBtnDisabledWidgetState extends State<SmBtnDisabledWidget> {
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
         iconPadding: const EdgeInsets.all(0.0),
         color: FlutterFlowTheme.of(context).accent1,
-        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-              fontFamily: 'Nunito',
-              color: const Color(0xFF4E596B),
-              fontSize: 12.0,
-            ),
+        textStyle: FlutterFlowTheme.of(context).bodySmall,
         elevation: 0.0,
         borderSide: const BorderSide(
           color: Colors.transparent,

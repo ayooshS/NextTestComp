@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mycompany.nextcomponents"
+    package="com.mycompany.bamboomobcomponents"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
 
 
     <application
-        android:label="next-components"
+        android:label="BambooMobComponents"
         tools:replace="android:label"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
@@ -45,7 +45,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="nextcomponents" android:host="nextcomponents.com" />
+                <data android:scheme="bamboomobcomponents" android:host="bamboomobcomponents.com" />
             </intent-filter>
 
         </activity>

@@ -1,4 +1,4 @@
-# next-components
+# BambooMobComponents
 
 A new Flutter project.
 

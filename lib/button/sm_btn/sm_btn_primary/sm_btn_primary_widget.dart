@@ -43,7 +43,11 @@ class _SmBtnPrimaryWidgetState extends State<SmBtnPrimaryWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return FFButtonWidget(
+    return
+        // Bezelled Button:
+        //
+        // Bezelled buttons serve as secondary actions, providing a balanced visual presence without overshadowing the primary filled buttons. They are suitable for actions that are important but not the main focus.
+        FFButtonWidget(
       onPressed: () {
         print('SmBtnPrimar pressed ...');
       },
@@ -52,7 +56,7 @@ class _SmBtnPrimaryWidgetState extends State<SmBtnPrimaryWidget> {
       options: FFButtonOptions(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
         iconPadding: const EdgeInsets.all(0.0),
-        color: FlutterFlowTheme.of(context).tertiary,
+        color: FlutterFlowTheme.of(context).pPrimary,
         textStyle: FlutterFlowTheme.of(context).labelMedium.override(
               fontFamily: 'Nunito',
               color: FlutterFlowTheme.of(context).btnColor,

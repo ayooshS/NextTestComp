@@ -32,21 +32,28 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
+  late Color corePrimary;
+  late Color coreVariant;
+  late Color coreError;
+  late Color coreSuccess;
+  late Color coreWarning;
+  late Color coreAccent;
+  late Color surfaceBackground;
+  late Color surfaceBackgroundGlass;
+  late Color surfaceOverlay;
+  late Color typeHigh;
+  late Color typeMedium;
+  late Color typeLow;
+  late Color inputBorder;
+  late Color inputBackground;
+  late Color elevation01dp;
+  late Color elevation02dp;
+  late Color buttonDisabled;
+  late Color buttonBezeledGrey;
+  late Color buttonOverlay;
+  late Color buttonColor;
   late Color pPrimary;
-  late Color pVariant;
-  late Color pError;
-  late Color sfBackground;
-  late Color sfBackgroundGlass;
-  late Color sfOverlay;
-  late Color el01;
-  late Color el02;
-  late Color tyHigh;
-  late Color tyMedium;
-  late Color tyLow;
-  late Color btnBezeledGrey;
-  late Color btnDisabled;
   late Color btnColor;
-  late Color btnOverlay;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -136,21 +143,28 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
 
+  late Color corePrimary = const Color(0xFF0486FF);
+  late Color coreVariant = const Color(0xFF02539E);
+  late Color coreError = const Color(0xFFE53E3E);
+  late Color coreSuccess = const Color(0xFF00C356);
+  late Color coreWarning = const Color(0xFFFF8B00);
+  late Color coreAccent = const Color(0xFFA305E5);
+  late Color surfaceBackground = const Color(0xFFFFFFFF);
+  late Color surfaceBackgroundGlass = const Color(0x99FFFFFF);
+  late Color surfaceOverlay = const Color(0xCCFFFFFF);
+  late Color typeHigh = const Color(0xFF4E596B);
+  late Color typeMedium = const Color(0xFF5B687D);
+  late Color typeLow = const Color(0xFF818C9E);
+  late Color inputBorder = const Color(0x3FC0C5CF);
+  late Color inputBackground = const Color(0xFFF7F8FB);
+  late Color elevation01dp = const Color(0xFFF7F8FB);
+  late Color elevation02dp = const Color(0xFFEAEEF4);
+  late Color buttonDisabled = const Color(0x1EFFFFFF);
+  late Color buttonBezeledGrey = const Color(0x11FFFFFF);
+  late Color buttonOverlay = const Color(0x11FFFFFF);
+  late Color buttonColor = const Color(0xFFFFFFFF);
   late Color pPrimary = const Color(0xFF0486FF);
-  late Color pVariant = const Color(0xFF02539E);
-  late Color pError = const Color(0xFFE53E3E);
-  late Color sfBackground = const Color(0xFFFFFFFF);
-  late Color sfBackgroundGlass = const Color(0x99FFFFFF);
-  late Color sfOverlay = const Color(0xCCFFFFFF);
-  late Color el01 = const Color(0xFFF7F8FB);
-  late Color el02 = const Color(0xFFEAEEF4);
-  late Color tyHigh = const Color(0xFFF45864);
-  late Color tyMedium = const Color(0xFF56BEE9);
-  late Color tyLow = const Color(0xFF5DF48F);
-  late Color btnBezeledGrey = const Color(0x11FFFFFF);
-  late Color btnDisabled = const Color(0x1EFFFFFF);
   late Color btnColor = const Color(0xFFFFFFFF);
-  late Color btnOverlay = const Color(0xCCFFFFFF);
 }
 
 abstract class Typography {
@@ -194,7 +208,7 @@ class ThemeTypography extends Typography {
   String get displayLargeFamily => 'Nunito';
   TextStyle get displayLarge => GoogleFonts.getFont(
         'Nunito',
-        color: theme.primaryText,
+        color: theme.typeHigh,
         fontWeight: FontWeight.bold,
         fontSize: 26.0,
         fontStyle: FontStyle.normal,
@@ -202,7 +216,7 @@ class ThemeTypography extends Typography {
   String get displayMediumFamily => 'Nunito';
   TextStyle get displayMedium => GoogleFonts.getFont(
         'Nunito',
-        color: theme.primaryText,
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
         fontSize: 26.0,
         fontStyle: FontStyle.normal,
@@ -210,25 +224,24 @@ class ThemeTypography extends Typography {
   String get displaySmallFamily => 'Nunito';
   TextStyle get displaySmall => GoogleFonts.getFont(
         'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.bold,
-        fontSize: 20.0,
-        fontStyle: FontStyle.normal,
+        color: theme.typeHigh,
+        fontWeight: FontWeight.w600,
+        fontSize: 36.0,
       );
   String get headlineLargeFamily => 'Nunito';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
+        color: theme.typeHigh,
+        fontWeight: FontWeight.bold,
         fontSize: 20.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineMediumFamily => 'Nunito';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Nunito',
-        color: theme.primaryText,
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        fontSize: 20.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineSmallFamily => 'Nunito';
@@ -242,39 +255,36 @@ class ThemeTypography extends Typography {
   String get titleLargeFamily => 'Nunito';
   TextStyle get titleLarge => GoogleFonts.getFont(
         'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-        fontStyle: FontStyle.normal,
+        color: theme.typeHigh,
+        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
       );
   String get titleMediumFamily => 'Nunito';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Nunito',
-        color: theme.info,
+        color: theme.typeHigh,
         fontWeight: FontWeight.w600,
         fontSize: 16.0,
         fontStyle: FontStyle.normal,
       );
-  String get titleSmallFamily => 'Nunito';
+  String get titleSmallFamily => 'Readex Pro';
   TextStyle get titleSmall => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.info,
+        'Readex Pro',
+        color: theme.typeHigh,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelLargeFamily => 'Readex Pro';
+  TextStyle get labelLarge => GoogleFonts.getFont(
+        'Readex Pro',
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
-        fontStyle: FontStyle.normal,
-      );
-  String get labelLargeFamily => 'Nunito';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-        fontStyle: FontStyle.normal,
       );
   String get labelMediumFamily => 'Nunito';
   TextStyle get labelMedium => GoogleFonts.getFont(
         'Nunito',
-        color: theme.secondaryText,
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
         fontStyle: FontStyle.normal,
@@ -282,7 +292,7 @@ class ThemeTypography extends Typography {
   String get labelSmallFamily => 'Nunito';
   TextStyle get labelSmall => GoogleFonts.getFont(
         'Nunito',
-        color: theme.secondaryText,
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
         fontSize: 10.0,
         fontStyle: FontStyle.normal,
@@ -290,23 +300,25 @@ class ThemeTypography extends Typography {
   String get bodyLargeFamily => 'Readex Pro';
   TextStyle get bodyLarge => GoogleFonts.getFont(
         'Readex Pro',
-        color: theme.primaryText,
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Readex Pro';
+  String get bodyMediumFamily => 'Nunito';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Readex Pro',
-        color: theme.primaryText,
+        'Nunito',
+        color: theme.typeHigh,
+        fontWeight: FontWeight.normal,
+        fontSize: 16.0,
+        fontStyle: FontStyle.normal,
+      );
+  String get bodySmallFamily => 'Nunito';
+  TextStyle get bodySmall => GoogleFonts.getFont(
+        'Nunito',
+        color: theme.typeHigh,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
-      );
-  String get bodySmallFamily => 'Readex Pro';
-  TextStyle get bodySmall => GoogleFonts.getFont(
-        'Readex Pro',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
+        fontStyle: FontStyle.normal,
       );
 }
 

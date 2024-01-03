@@ -29,17 +29,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const HomePageWidget(),
+      errorBuilder: (context, state) => const TestHomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const HomePageWidget(),
+          builder: (context, _) => const TestHomePageWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          name: 'TestHomePage',
+          path: '/testHomePage',
+          builder: (context, params) => const TestHomePageWidget(),
+        ),
+        FFRoute(
+          name: 'Finance',
+          path: '/finance',
+          builder: (context, params) => const FinanceWidget(),
+        ),
+        FFRoute(
+          name: 'Automate',
+          path: '/automate',
+          builder: (context, params) => const AutomateWidget(),
+        ),
+        FFRoute(
+          name: 'Source',
+          path: '/source',
+          builder: (context, params) => const SourceWidget(),
+        ),
+        FFRoute(
+          name: 'Alert',
+          path: '/alert',
+          builder: (context, params) => const AlertWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
