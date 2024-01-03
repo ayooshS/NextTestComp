@@ -51,8 +51,7 @@ class _SmBtnPrimaryWidgetState extends State<SmBtnPrimaryWidget> {
       onPressed: () {
         print('SmBtnPrimar pressed ...');
       },
-      text: widget.btnText,
-      icon: widget.icon,
+      text: 'Button',
       options: FFButtonOptions(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
         iconPadding: const EdgeInsets.all(0.0),
