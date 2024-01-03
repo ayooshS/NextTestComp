@@ -271,63 +271,58 @@ class _NavBottomWidgetState extends State<NavBottomWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    width: 64.0,
-                    height: 74.0,
-                    decoration: const BoxDecoration(),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 16.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: 32.0,
-                            height: 32.0,
-                            decoration: const BoxDecoration(),
-                            child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: FlutterFlowIconButton(
-                                borderColor: const Color(0x00FFFFFF),
-                                borderRadius: 0.0,
-                                borderWidth: 0.0,
-                                buttonSize: double.infinity,
-                                fillColor: const Color(0x00FFFFFF),
-                                icon: Icon(
-                                  Icons.route,
-                                  color: widget.selectedPageIndex == 4
-                                      ? FlutterFlowTheme.of(context).corePrimary
-                                      : FlutterFlowTheme.of(context).typeLow,
-                                  size: 20.0,
-                                ),
-                                onPressed: () async {
-                                  context.pushNamed(
-                                    'Automate',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType: PageTransitionType.fade,
-                                        duration: Duration(milliseconds: 0),
-                                      ),
-                                    },
-                                  );
-                                },
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 16.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 32.0,
+                          height: 32.0,
+                          decoration: const BoxDecoration(),
+                          child: Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: const Color(0x00FFFFFF),
+                              borderRadius: 0.0,
+                              borderWidth: 0.0,
+                              buttonSize: double.infinity,
+                              fillColor: const Color(0x00FFFFFF),
+                              icon: Icon(
+                                Icons.route,
+                                color: widget.selectedPageIndex == 4
+                                    ? FlutterFlowTheme.of(context).corePrimary
+                                    : FlutterFlowTheme.of(context).typeLow,
+                                size: 20.0,
                               ),
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'Automate',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: const TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType: PageTransitionType.fade,
+                                      duration: Duration(milliseconds: 0),
+                                    ),
+                                  },
+                                );
+                              },
                             ),
                           ),
-                          Text(
-                            'Automate',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: 'Nunito',
-                                  color: widget.selectedPageIndex == 4
-                                      ? FlutterFlowTheme.of(context).corePrimary
-                                      : FlutterFlowTheme.of(context).typeLow,
-                                ),
-                          ),
-                        ],
-                      ),
+                        ),
+                        Text(
+                          'Automate',
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: 'Nunito',
+                                color: widget.selectedPageIndex == 4
+                                    ? FlutterFlowTheme.of(context).corePrimary
+                                    : FlutterFlowTheme.of(context).typeLow,
+                              ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -397,7 +392,10 @@ class _NavBottomWidgetState extends State<NavBottomWidget> {
                   ),
                 ],
               ),
-            ].divide(const SizedBox(width: 4.0)).around(const SizedBox(width: 4.0)),
+            ]
+                .divide(const SizedBox(width: 8.0))
+                .addToStart(const SizedBox(width: 24.0))
+                .addToEnd(const SizedBox(width: 24.0)),
           ),
         ),
       ),
