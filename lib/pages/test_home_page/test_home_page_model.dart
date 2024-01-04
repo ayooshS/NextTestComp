@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/navigation/nav_bottom/nav_bottom/nav_bottom_widget.dart';
 import '/navigation/nav_secondary/nav_secondary/nav_secondary_widget.dart';
-import '/navigation/top_nav/top_nav_brand/top_nav_brand_widget.dart';
 import '/navigation/top_nav/top_nav_default/top_nav_default_widget.dart';
 import '/snack_bar/s_b_default/s_b_default_widget.dart';
 import '/snack_bar/s_b_semantic/s_b_semantic_widget.dart';
@@ -14,8 +13,6 @@ class TestHomePageModel extends FlutterFlowModel<TestHomePageWidget> {
   final unfocusNode = FocusNode();
   // Model for TopNavDefault component.
   late TopNavDefaultModel topNavDefaultModel;
-  // Model for TopNavBrand component.
-  late TopNavBrandModel topNavBrandModel;
   // Model for NavSecondary component.
   late NavSecondaryModel navSecondaryModel;
   // Model for SBDefault component.
@@ -30,7 +27,6 @@ class TestHomePageModel extends FlutterFlowModel<TestHomePageWidget> {
   @override
   void initState(BuildContext context) {
     topNavDefaultModel = createModel(context, () => TopNavDefaultModel());
-    topNavBrandModel = createModel(context, () => TopNavBrandModel());
     navSecondaryModel = createModel(context, () => NavSecondaryModel());
     sBDefaultModel = createModel(context, () => SBDefaultModel());
     sBSemanticModel = createModel(context, () => SBSemanticModel());
@@ -41,7 +37,6 @@ class TestHomePageModel extends FlutterFlowModel<TestHomePageWidget> {
   void dispose() {
     unfocusNode.dispose();
     topNavDefaultModel.dispose();
-    topNavBrandModel.dispose();
     navSecondaryModel.dispose();
     sBDefaultModel.dispose();
     sBSemanticModel.dispose();

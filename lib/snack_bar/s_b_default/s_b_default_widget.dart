@@ -51,7 +51,7 @@ class _SBDefaultWidgetState extends State<SBDefaultWidget> {
         width: 345.0,
         height: 48.0,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).surfaceOverlay,
+          color: FlutterFlowTheme.of(context).elevation01dp,
           borderRadius: BorderRadius.circular(4.0),
         ),
         child: Padding(

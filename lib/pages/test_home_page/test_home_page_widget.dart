@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/navigation/nav_bottom/nav_bottom/nav_bottom_widget.dart';
 import '/navigation/nav_secondary/nav_secondary/nav_secondary_widget.dart';
-import '/navigation/top_nav/top_nav_brand/top_nav_brand_widget.dart';
 import '/navigation/top_nav/top_nav_default/top_nav_default_widget.dart';
 import '/snack_bar/s_b_default/s_b_default_widget.dart';
 import '/snack_bar/s_b_semantic/s_b_semantic_widget.dart';
@@ -86,33 +85,11 @@ class _TestHomePageWidgetState extends State<TestHomePageWidget> {
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 64.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 64.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, -1.0),
-                          child: wrapWithModel(
-                            model: _model.topNavBrandModel,
-                            updateCallback: () => setState(() {}),
-                            child: TopNavBrandWidget(
-                              topNavIcon: Icon(
-                                Icons.chevron_left_rounded,
-                                color: FlutterFlowTheme.of(context).typeHigh,
-                                size: 24.0,
-                              ),
-                              icon1: Icon(
-                                Icons.shopping_cart_outlined,
-                                color: FlutterFlowTheme.of(context).typeHigh,
-                              ),
-                              icon2: Icon(
-                                Icons.shopping_cart_outlined,
-                                color: FlutterFlowTheme.of(context).typeHigh,
-                              ),
-                            ),
-                          ),
-                        ),
                         wrapWithModel(
                           model: _model.navSecondaryModel,
                           updateCallback: () => setState(() {}),
@@ -145,12 +122,19 @@ class _TestHomePageWidgetState extends State<TestHomePageWidget> {
                           updateCallback: () => setState(() {}),
                           child: const SBDefaultWidget(),
                         ),
-                        wrapWithModel(
-                          model: _model.sBSemanticModel,
-                          updateCallback: () => setState(() {}),
-                          child: const SBSemanticWidget(),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Expanded(
+                              child: wrapWithModel(
+                                model: _model.sBSemanticModel,
+                                updateCallback: () => setState(() {}),
+                                child: const SBSemanticWidget(),
+                              ),
+                            ),
+                          ],
                         ),
-                      ].divide(const SizedBox(height: 0.0)),
+                      ].divide(const SizedBox(height: 32.0)),
                     ),
                   ),
                 ),
