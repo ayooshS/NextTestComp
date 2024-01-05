@@ -1,8 +1,11 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'nav_bottom_model.dart';
 export 'nav_bottom_model.dart';
 
@@ -21,8 +24,38 @@ class NavBottomWidget extends StatefulWidget {
   _NavBottomWidgetState createState() => _NavBottomWidgetState();
 }
 
-class _NavBottomWidgetState extends State<NavBottomWidget> {
+class _NavBottomWidgetState extends State<NavBottomWidget>
+    with TickerProviderStateMixin {
   late NavBottomModel _model;
+
+  final animationsMap = {
+    'iconButtonOnActionTriggerAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      applyInitialState: true,
+      effects: [
+        ScaleEffect(
+          curve: Curves.elasticOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: const Offset(1.0, 1.0),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'iconButtonOnActionTriggerAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      applyInitialState: true,
+      effects: [
+        ScaleEffect(
+          curve: Curves.bounceOut,
+          delay: 0.ms,
+          duration: 200.ms,
+          begin: const Offset(0.8, 0.8),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+  };
 
   @override
   void setState(VoidCallback callback) {
@@ -34,6 +67,13 @@ class _NavBottomWidgetState extends State<NavBottomWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => NavBottomModel());
+
+    setupAnimations(
+      animationsMap.values.where((anim) =>
+          anim.trigger == AnimationTrigger.onActionTrigger ||
+          !anim.applyInitialState),
+      this,
+    );
   }
 
   @override
@@ -119,10 +159,13 @@ class _NavBottomWidgetState extends State<NavBottomWidget> {
                                       },
                                     );
                                   },
+                                ).animateOnActionTrigger(
+                                  animationsMap[
+                                      'iconButtonOnActionTriggerAnimation1']!,
                                 ),
                               ),
                             ),
-                            Text(
+                            AutoSizeText(
                               'Home',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
@@ -182,6 +225,9 @@ class _NavBottomWidgetState extends State<NavBottomWidget> {
                                   },
                                 );
                               },
+                            ).animateOnActionTrigger(
+                              animationsMap[
+                                  'iconButtonOnActionTriggerAnimation2']!,
                             ),
                           ),
                         ),

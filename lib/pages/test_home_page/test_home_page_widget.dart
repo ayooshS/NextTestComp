@@ -60,81 +60,105 @@ class _TestHomePageWidgetState extends State<TestHomePageWidget> {
             child: Stack(
               alignment: const AlignmentDirectional(0.0, 0.0),
               children: [
-                Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
-                  child: wrapWithModel(
-                    model: _model.topNavDefaultModel,
-                    updateCallback: () => setState(() {}),
-                    child: TopNavDefaultWidget(
-                      icon1: Icon(
-                        Icons.shopping_cart_outlined,
-                        color: FlutterFlowTheme.of(context).typeHigh,
-                      ),
-                      icon2: Icon(
-                        Icons.support_agent_rounded,
-                        color: FlutterFlowTheme.of(context).typeHigh,
-                      ),
-                      icon3: Icon(
-                        Icons.cancel_outlined,
-                        color: FlutterFlowTheme.of(context).typeHigh,
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      child: wrapWithModel(
+                        model: _model.topNavDefaultModel,
+                        updateCallback: () => setState(() {}),
+                        child: TopNavDefaultWidget(
+                          icon1: Icon(
+                            Icons.shopping_cart_outlined,
+                            color: FlutterFlowTheme.of(context).typeHigh,
+                          ),
+                          icon2: Icon(
+                            Icons.support_agent_rounded,
+                            color: FlutterFlowTheme.of(context).typeHigh,
+                          ),
+                          icon3: Icon(
+                            Icons.cancel_outlined,
+                            color: FlutterFlowTheme.of(context).typeHigh,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      child: wrapWithModel(
+                        model: _model.navSecondaryModel,
+                        updateCallback: () => setState(() {}),
+                        child: NavSecondaryWidget(
+                          inputFieldLabel: 'Search',
+                          inputFieldIcon: Icon(
+                            Icons.search_rounded,
+                            color: FlutterFlowTheme.of(context).typeMedium,
+                            size: 20.0,
+                          ),
+                          firstIcon: Icon(
+                            Icons.filter_list_rounded,
+                            color: FlutterFlowTheme.of(context).typeHigh,
+                            size: 24.0,
+                          ),
+                          secondIcon: Icon(
+                            Icons.filter_list_rounded,
+                            color: FlutterFlowTheme.of(context).typeHigh,
+                            size: 24.0,
+                          ),
+                          thirdIcon: Icon(
+                            Icons.filter_list_rounded,
+                            color: FlutterFlowTheme.of(context).typeHigh,
+                            size: 24.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(16.0, 64.0, 16.0, 0.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        wrapWithModel(
-                          model: _model.navSecondaryModel,
-                          updateCallback: () => setState(() {}),
-                          child: NavSecondaryWidget(
-                            inputFieldLabel: 'Search',
-                            inputFieldIcon: Icon(
-                              Icons.search_rounded,
-                              color: FlutterFlowTheme.of(context).typeMedium,
-                              size: 20.0,
-                            ),
-                            firstIcon: Icon(
-                              Icons.filter_list_rounded,
-                              color: FlutterFlowTheme.of(context).typeHigh,
-                              size: 24.0,
-                            ),
-                            secondIcon: Icon(
-                              Icons.filter_list_rounded,
-                              color: FlutterFlowTheme.of(context).typeHigh,
-                              size: 24.0,
-                            ),
-                            thirdIcon: Icon(
-                              Icons.filter_list_rounded,
-                              color: FlutterFlowTheme.of(context).typeHigh,
-                              size: 24.0,
-                            ),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          wrapWithModel(
+                            model: _model.sBDefaultModel,
+                            updateCallback: () => setState(() {}),
+                            child: const SBDefaultWidget(),
                           ),
-                        ),
-                        wrapWithModel(
-                          model: _model.sBDefaultModel,
-                          updateCallback: () => setState(() {}),
-                          child: const SBDefaultWidget(),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: wrapWithModel(
-                                model: _model.sBSemanticModel,
-                                updateCallback: () => setState(() {}),
-                                child: const SBSemanticWidget(),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Expanded(
+                                child: wrapWithModel(
+                                  model: _model.sBSemanticModel,
+                                  updateCallback: () => setState(() {}),
+                                  child: const SBSemanticWidget(),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
+                                bottomLeft: Radius.circular(8.0),
+                                bottomRight: Radius.circular(8.0),
+                                topLeft: Radius.circular(8.0),
+                                topRight: Radius.circular(8.0),
+                              ),
+                              border: Border.all(
+                                color: FlutterFlowTheme.of(context).inputBorder,
+                                width: 3.0,
                               ),
                             ),
-                          ],
-                        ),
-                      ].divide(const SizedBox(height: 32.0)),
+                          ),
+                        ].divide(const SizedBox(height: 32.0)),
+                      ),
                     ),
                   ),
                 ),
