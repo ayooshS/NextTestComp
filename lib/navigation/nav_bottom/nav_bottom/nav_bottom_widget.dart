@@ -29,15 +29,67 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
   late NavBottomModel _model;
 
   final animationsMap = {
-    'iconButtonOnActionTriggerAnimation': AnimationInfo(
+    'iconButtonOnActionTriggerAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onActionTrigger,
       applyInitialState: true,
       effects: [
         ScaleEffect(
-          curve: Curves.bounceOut,
+          curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 150.ms,
-          begin: const Offset(0.7, 0.7),
+          begin: const Offset(0.8, 0.8),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'iconButtonOnActionTriggerAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      applyInitialState: true,
+      effects: [
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 150.ms,
+          begin: const Offset(0.8, 0.8),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'iconButtonOnActionTriggerAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      applyInitialState: true,
+      effects: [
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 150.ms,
+          begin: const Offset(0.8, 0.8),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'iconButtonOnActionTriggerAnimation4': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      applyInitialState: true,
+      effects: [
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 150.ms,
+          begin: const Offset(0.8, 0.8),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'iconButtonOnActionTriggerAnimation5': AnimationInfo(
+      trigger: AnimationTrigger.onActionTrigger,
+      applyInitialState: true,
+      effects: [
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 150.ms,
+          begin: const Offset(0.8, 0.8),
           end: const Offset(1.0, 1.0),
         ),
       ],
@@ -134,6 +186,19 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                     size: 20.0,
                                   ),
                                   onPressed: () async {
+                                    if (animationsMap[
+                                            'iconButtonOnActionTriggerAnimation1'] !=
+                                        null) {
+                                      await animationsMap[
+                                              'iconButtonOnActionTriggerAnimation1']!
+                                          .controller
+                                          .forward(from: 0.0)
+                                          .whenComplete(animationsMap[
+                                                  'iconButtonOnActionTriggerAnimation1']!
+                                              .controller
+                                              .reverse);
+                                    }
+
                                     context.pushNamed(
                                       'TestHomePage',
                                       extra: <String, dynamic>{
@@ -146,6 +211,9 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                       },
                                     );
                                   },
+                                ).animateOnActionTrigger(
+                                  animationsMap[
+                                      'iconButtonOnActionTriggerAnimation1']!,
                                 ),
                               ),
                             ),
@@ -198,6 +266,19 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                 size: 28.0,
                               ),
                               onPressed: () async {
+                                if (animationsMap[
+                                        'iconButtonOnActionTriggerAnimation2'] !=
+                                    null) {
+                                  await animationsMap[
+                                          'iconButtonOnActionTriggerAnimation2']!
+                                      .controller
+                                      .forward(from: 0.0)
+                                      .whenComplete(animationsMap[
+                                              'iconButtonOnActionTriggerAnimation2']!
+                                          .controller
+                                          .reverse);
+                                }
+
                                 context.pushNamed(
                                   'Finance',
                                   extra: <String, dynamic>{
@@ -211,7 +292,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                               },
                             ).animateOnActionTrigger(
                               animationsMap[
-                                  'iconButtonOnActionTriggerAnimation']!,
+                                  'iconButtonOnActionTriggerAnimation2']!,
                             ),
                           ),
                         ),
@@ -261,6 +342,19 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                 size: 20.0,
                               ),
                               onPressed: () async {
+                                if (animationsMap[
+                                        'iconButtonOnActionTriggerAnimation3'] !=
+                                    null) {
+                                  await animationsMap[
+                                          'iconButtonOnActionTriggerAnimation3']!
+                                      .controller
+                                      .forward(from: 0.0)
+                                      .whenComplete(animationsMap[
+                                              'iconButtonOnActionTriggerAnimation3']!
+                                          .controller
+                                          .reverse);
+                                }
+
                                 context.pushNamed(
                                   'Source',
                                   extra: <String, dynamic>{
@@ -272,6 +366,9 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                   },
                                 );
                               },
+                            ).animateOnActionTrigger(
+                              animationsMap[
+                                  'iconButtonOnActionTriggerAnimation3']!,
                             ),
                           ),
                         ),
@@ -321,6 +418,19 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                 size: 20.0,
                               ),
                               onPressed: () async {
+                                if (animationsMap[
+                                        'iconButtonOnActionTriggerAnimation4'] !=
+                                    null) {
+                                  await animationsMap[
+                                          'iconButtonOnActionTriggerAnimation4']!
+                                      .controller
+                                      .forward(from: 0.0)
+                                      .whenComplete(animationsMap[
+                                              'iconButtonOnActionTriggerAnimation4']!
+                                          .controller
+                                          .reverse);
+                                }
+
                                 context.pushNamed(
                                   'Automate',
                                   extra: <String, dynamic>{
@@ -332,6 +442,9 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                   },
                                 );
                               },
+                            ).animateOnActionTrigger(
+                              animationsMap[
+                                  'iconButtonOnActionTriggerAnimation4']!,
                             ),
                           ),
                         ),
@@ -381,6 +494,19 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                 size: 20.0,
                               ),
                               onPressed: () async {
+                                if (animationsMap[
+                                        'iconButtonOnActionTriggerAnimation5'] !=
+                                    null) {
+                                  await animationsMap[
+                                          'iconButtonOnActionTriggerAnimation5']!
+                                      .controller
+                                      .forward(from: 0.0)
+                                      .whenComplete(animationsMap[
+                                              'iconButtonOnActionTriggerAnimation5']!
+                                          .controller
+                                          .reverse);
+                                }
+
                                 context.pushNamed(
                                   'Alert',
                                   extra: <String, dynamic>{
@@ -392,6 +518,9 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                   },
                                 );
                               },
+                            ).animateOnActionTrigger(
+                              animationsMap[
+                                  'iconButtonOnActionTriggerAnimation5']!,
                             ),
                           ),
                         ),
