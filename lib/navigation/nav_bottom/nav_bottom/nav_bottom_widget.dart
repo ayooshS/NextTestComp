@@ -195,7 +195,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                 color: widget.selectedPageIndex == 2
                                     ? FlutterFlowTheme.of(context).corePrimary
                                     : FlutterFlowTheme.of(context).typeLow,
-                                size: 24.0,
+                                size: 28.0,
                               ),
                               onPressed: () async {
                                 context.pushNamed(
