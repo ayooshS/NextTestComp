@@ -13,7 +13,5 @@ class NavBottomModel extends FlutterFlowModel<NavBottomWidget> {
 
   /// Action blocks are added here.
 
-  Future iconAnim(BuildContext context) async {}
-
   /// Additional helper methods are added here.
 }

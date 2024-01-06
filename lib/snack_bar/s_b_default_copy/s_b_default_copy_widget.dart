@@ -1,12 +1,13 @@
+import '/button/sm_btn/default/sm_btn_link_def/sm_btn_link_def_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 's_b_semantic_model.dart';
-export 's_b_semantic_model.dart';
+import 's_b_default_copy_model.dart';
+export 's_b_default_copy_model.dart';
 
-class SBSemanticWidget extends StatefulWidget {
-  const SBSemanticWidget({
+class SBDefaultCopyWidget extends StatefulWidget {
+  const SBDefaultCopyWidget({
     super.key,
     String? text,
     String? btnText,
@@ -17,11 +18,11 @@ class SBSemanticWidget extends StatefulWidget {
   final String btnText;
 
   @override
-  _SBSemanticWidgetState createState() => _SBSemanticWidgetState();
+  _SBDefaultCopyWidgetState createState() => _SBDefaultCopyWidgetState();
 }
 
-class _SBSemanticWidgetState extends State<SBSemanticWidget> {
-  late SBSemanticModel _model;
+class _SBDefaultCopyWidgetState extends State<SBDefaultCopyWidget> {
+  late SBDefaultCopyModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -32,7 +33,7 @@ class _SBSemanticWidgetState extends State<SBSemanticWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SBSemanticModel());
+    _model = createModel(context, () => SBDefaultCopyModel());
   }
 
   @override
@@ -50,7 +51,7 @@ class _SBSemanticWidgetState extends State<SBSemanticWidget> {
         width: 345.0,
         height: 48.0,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).coreError,
+          color: FlutterFlowTheme.of(context).elevation01dp,
           borderRadius: BorderRadius.circular(4.0),
         ),
         child: Padding(
@@ -62,26 +63,28 @@ class _SBSemanticWidgetState extends State<SBSemanticWidget> {
               Expanded(
                 child: Text(
                   widget.text.maybeHandleOverflow(
-                    maxChars: 10,
+                    maxChars: 12,
                     replacement: '…',
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Nunito',
-                        color: FlutterFlowTheme.of(context).surfaceBackground,
-                      ),
+                  maxLines: 1,
+                  style: FlutterFlowTheme.of(context).bodyMedium,
                 ),
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  wrapWithModel(
+                    model: _model.smBtnLinkDefModel,
+                    updateCallback: () => setState(() {}),
+                    child: const SmBtnLinkDefWidget(),
+                  ),
                   FlutterFlowIconButton(
-                    borderColor: Colors.transparent,
                     borderRadius: 0.0,
                     borderWidth: 0.0,
                     buttonSize: 40.0,
                     icon: Icon(
                       Icons.close_rounded,
-                      color: FlutterFlowTheme.of(context).surfaceBackground,
+                      color: FlutterFlowTheme.of(context).typeHigh,
                       size: 20.0,
                     ),
                     onPressed: () {

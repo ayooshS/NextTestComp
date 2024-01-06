@@ -29,28 +29,15 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
   late NavBottomModel _model;
 
   final animationsMap = {
-    'iconButtonOnActionTriggerAnimation1': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        ScaleEffect(
-          curve: Curves.elasticOut,
-          delay: 0.ms,
-          duration: 200.ms,
-          begin: const Offset(1.0, 1.0),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'iconButtonOnActionTriggerAnimation2': AnimationInfo(
+    'iconButtonOnActionTriggerAnimation': AnimationInfo(
       trigger: AnimationTrigger.onActionTrigger,
       applyInitialState: true,
       effects: [
         ScaleEffect(
           curve: Curves.bounceOut,
           delay: 0.ms,
-          duration: 200.ms,
-          begin: const Offset(0.8, 0.8),
+          duration: 150.ms,
+          begin: const Offset(0.7, 0.7),
           end: const Offset(1.0, 1.0),
         ),
       ],
@@ -101,7 +88,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
         ),
         child: Container(
           width: double.infinity,
-          height: 80.0,
+          height: 86.0,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).surfaceOverlay,
             border: Border.all(
@@ -127,8 +114,8 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Container(
-                              width: 32.0,
-                              height: 32.0,
+                              width: 40.0,
+                              height: 40.0,
                               decoration: const BoxDecoration(),
                               child: Align(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
@@ -136,10 +123,10 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                   borderColor: const Color(0x00FFFFFF),
                                   borderRadius: 0.0,
                                   borderWidth: 0.0,
-                                  buttonSize: double.infinity,
+                                  buttonSize: 40.0,
                                   fillColor: const Color(0x00FFFFFF),
                                   icon: Icon(
-                                    Icons.other_houses_outlined,
+                                    FFIcons.kicFluentHome20Regular,
                                     color: widget.selectedPageIndex == 1
                                         ? FlutterFlowTheme.of(context)
                                             .corePrimary
@@ -147,7 +134,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                     size: 20.0,
                                   ),
                                   onPressed: () async {
-                                    context.goNamed(
+                                    context.pushNamed(
                                       'TestHomePage',
                                       extra: <String, dynamic>{
                                         kTransitionInfoKey: const TransitionInfo(
@@ -159,9 +146,6 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                                       },
                                     );
                                   },
-                                ).animateOnActionTrigger(
-                                  animationsMap[
-                                      'iconButtonOnActionTriggerAnimation1']!,
                                 ),
                               ),
                             ),
@@ -195,8 +179,8 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                          width: 32.0,
-                          height: 32.0,
+                          width: 40.0,
+                          height: 40.0,
                           decoration: const BoxDecoration(),
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
@@ -204,14 +188,14 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                               borderColor: const Color(0x00FFFFFF),
                               borderRadius: 0.0,
                               borderWidth: 0.0,
-                              buttonSize: double.infinity,
+                              buttonSize: 40.0,
                               fillColor: const Color(0x00FFFFFF),
                               icon: Icon(
-                                Icons.currency_rupee_rounded,
+                                FFIcons.kicFluentMoney20Regular,
                                 color: widget.selectedPageIndex == 2
                                     ? FlutterFlowTheme.of(context).corePrimary
                                     : FlutterFlowTheme.of(context).typeLow,
-                                size: 20.0,
+                                size: 24.0,
                               ),
                               onPressed: () async {
                                 context.pushNamed(
@@ -227,7 +211,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                               },
                             ).animateOnActionTrigger(
                               animationsMap[
-                                  'iconButtonOnActionTriggerAnimation2']!,
+                                  'iconButtonOnActionTriggerAnimation']!,
                             ),
                           ),
                         ),
@@ -258,8 +242,8 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                          width: 32.0,
-                          height: 32.0,
+                          width: 40.0,
+                          height: 40.0,
                           decoration: const BoxDecoration(),
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
@@ -270,7 +254,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                               buttonSize: double.infinity,
                               fillColor: const Color(0x00FFFFFF),
                               icon: Icon(
-                                Icons.storefront,
+                                FFIcons.kicFluentAppFolder20Regular,
                                 color: widget.selectedPageIndex == 3
                                     ? FlutterFlowTheme.of(context).corePrimary
                                     : FlutterFlowTheme.of(context).typeLow,
@@ -318,8 +302,8 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                          width: 32.0,
-                          height: 32.0,
+                          width: 40.0,
+                          height: 40.0,
                           decoration: const BoxDecoration(),
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
@@ -330,7 +314,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                               buttonSize: double.infinity,
                               fillColor: const Color(0x00FFFFFF),
                               icon: Icon(
-                                Icons.route,
+                                FFIcons.kicFluentFlow20Regular,
                                 color: widget.selectedPageIndex == 4
                                     ? FlutterFlowTheme.of(context).corePrimary
                                     : FlutterFlowTheme.of(context).typeLow,
@@ -351,7 +335,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                             ),
                           ),
                         ),
-                        Text(
+                        AutoSizeText(
                           'Automate',
                           style: FlutterFlowTheme.of(context)
                               .bodySmall
@@ -378,8 +362,8 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                          width: 32.0,
-                          height: 32.0,
+                          width: 40.0,
+                          height: 40.0,
                           decoration: const BoxDecoration(),
                           child: Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
@@ -390,7 +374,7 @@ class _NavBottomWidgetState extends State<NavBottomWidget>
                               buttonSize: double.infinity,
                               fillColor: const Color(0x00FFFFFF),
                               icon: Icon(
-                                Icons.notifications_none_rounded,
+                                FFIcons.kicFluentAlertBadge20Regular,
                                 color: widget.selectedPageIndex == 5
                                     ? FlutterFlowTheme.of(context).corePrimary
                                     : FlutterFlowTheme.of(context).typeLow,

@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/navigation/nav_bottom/nav_bottom/nav_bottom_widget.dart';
 import '/navigation/nav_secondary/nav_secondary/nav_secondary_widget.dart';
 import '/navigation/top_nav/top_nav_default/top_nav_default_widget.dart';
-import '/snack_bar/s_b_default/s_b_default_widget.dart';
-import '/snack_bar/s_b_semantic/s_b_semantic_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'test_home_page_model.dart';
@@ -125,39 +123,7 @@ class _TestHomePageWidgetState extends State<TestHomePageWidget> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          wrapWithModel(
-                            model: _model.sBDefaultModel,
-                            updateCallback: () => setState(() {}),
-                            child: const SBDefaultWidget(),
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: wrapWithModel(
-                                  model: _model.sBSemanticModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: const SBSemanticWidget(),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(8.0),
-                                bottomRight: Radius.circular(8.0),
-                                topLeft: Radius.circular(8.0),
-                                topRight: Radius.circular(8.0),
-                              ),
-                              border: Border.all(
-                                color: FlutterFlowTheme.of(context).inputBorder,
-                                width: 3.0,
-                              ),
-                            ),
-                          ),
-                        ].divide(const SizedBox(height: 32.0)),
+                        children: <Widget>[].divide(const SizedBox(height: 32.0)),
                       ),
                     ),
                   ),

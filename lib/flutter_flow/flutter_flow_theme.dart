@@ -52,6 +52,7 @@ abstract class FlutterFlowTheme {
   late Color buttonBezeledGrey;
   late Color buttonOverlay;
   late Color buttonColor;
+  late Color primaryWhite;
   late Color pPrimary;
   late Color btnColor;
 
@@ -163,6 +164,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color buttonBezeledGrey = const Color(0x11FFFFFF);
   late Color buttonOverlay = const Color(0x11FFFFFF);
   late Color buttonColor = const Color(0xFFFFFFFF);
+  late Color primaryWhite = const Color(0xFFFFFFFF);
   late Color pPrimary = const Color(0xFF0486FF);
   late Color btnColor = const Color(0xFFFFFFFF);
 }
