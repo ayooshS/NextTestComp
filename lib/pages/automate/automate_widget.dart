@@ -10,7 +10,7 @@ class AutomateWidget extends StatefulWidget {
   const AutomateWidget({super.key});
 
   @override
-  _AutomateWidgetState createState() => _AutomateWidgetState();
+  State<AutomateWidget> createState() => _AutomateWidgetState();
 }
 
 class _AutomateWidgetState extends State<AutomateWidget> {

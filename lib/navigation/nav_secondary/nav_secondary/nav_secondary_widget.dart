@@ -22,7 +22,7 @@ class NavSecondaryWidget extends StatefulWidget {
   final Widget? thirdIcon;
 
   @override
-  _NavSecondaryWidgetState createState() => _NavSecondaryWidgetState();
+  State<NavSecondaryWidget> createState() => _NavSecondaryWidgetState();
 }
 
 class _NavSecondaryWidgetState extends State<NavSecondaryWidget> {

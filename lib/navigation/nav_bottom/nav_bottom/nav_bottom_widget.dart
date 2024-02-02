@@ -21,7 +21,7 @@ class NavBottomWidget extends StatefulWidget {
   final bool hiddenNav;
 
   @override
-  _NavBottomWidgetState createState() => _NavBottomWidgetState();
+  State<NavBottomWidget> createState() => _NavBottomWidgetState();
 }
 
 class _NavBottomWidgetState extends State<NavBottomWidget>

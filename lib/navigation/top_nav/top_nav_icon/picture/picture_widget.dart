@@ -9,7 +9,7 @@ class PictureWidget extends StatefulWidget {
   const PictureWidget({super.key});
 
   @override
-  _PictureWidgetState createState() => _PictureWidgetState();
+  State<PictureWidget> createState() => _PictureWidgetState();
 }
 
 class _PictureWidgetState extends State<PictureWidget> {

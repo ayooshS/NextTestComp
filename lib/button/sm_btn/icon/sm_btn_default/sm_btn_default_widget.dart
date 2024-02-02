@@ -10,12 +10,12 @@ class SmBtnDefaultWidget extends StatefulWidget {
   const SmBtnDefaultWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _SmBtnDefaultWidgetState createState() => _SmBtnDefaultWidgetState();
+  State<SmBtnDefaultWidget> createState() => _SmBtnDefaultWidgetState();
 }
 
 class _SmBtnDefaultWidgetState extends State<SmBtnDefaultWidget> {

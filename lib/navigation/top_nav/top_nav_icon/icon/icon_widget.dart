@@ -12,7 +12,7 @@ class IconWidget extends StatefulWidget {
   final Widget? icon;
 
   @override
-  _IconWidgetState createState() => _IconWidgetState();
+  State<IconWidget> createState() => _IconWidgetState();
 }
 
 class _IconWidgetState extends State<IconWidget> {

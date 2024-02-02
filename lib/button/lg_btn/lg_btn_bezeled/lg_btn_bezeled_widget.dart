@@ -10,12 +10,12 @@ class LgBtnBezeledWidget extends StatefulWidget {
   const LgBtnBezeledWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _LgBtnBezeledWidgetState createState() => _LgBtnBezeledWidgetState();
+  State<LgBtnBezeledWidget> createState() => _LgBtnBezeledWidgetState();
 }
 
 class _LgBtnBezeledWidgetState extends State<LgBtnBezeledWidget> {

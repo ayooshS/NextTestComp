@@ -25,7 +25,7 @@ class TopNavDefaultWidget extends StatefulWidget {
   final Widget? icon3;
 
   @override
-  _TopNavDefaultWidgetState createState() => _TopNavDefaultWidgetState();
+  State<TopNavDefaultWidget> createState() => _TopNavDefaultWidgetState();
 }
 
 class _TopNavDefaultWidgetState extends State<TopNavDefaultWidget> {

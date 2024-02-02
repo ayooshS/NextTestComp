@@ -18,7 +18,7 @@ class SBDefaultWidget extends StatefulWidget {
   final String btnText;
 
   @override
-  _SBDefaultWidgetState createState() => _SBDefaultWidgetState();
+  State<SBDefaultWidget> createState() => _SBDefaultWidgetState();
 }
 
 class _SBDefaultWidgetState extends State<SBDefaultWidget> {

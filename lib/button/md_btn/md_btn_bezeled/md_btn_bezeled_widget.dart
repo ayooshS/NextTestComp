@@ -9,12 +9,12 @@ class MdBtnBezeledWidget extends StatefulWidget {
   const MdBtnBezeledWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _MdBtnBezeledWidgetState createState() => _MdBtnBezeledWidgetState();
+  State<MdBtnBezeledWidget> createState() => _MdBtnBezeledWidgetState();
 }
 
 class _MdBtnBezeledWidgetState extends State<MdBtnBezeledWidget> {

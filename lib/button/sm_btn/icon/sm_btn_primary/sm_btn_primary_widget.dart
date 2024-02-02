@@ -10,13 +10,13 @@ class SmBtnPrimaryWidget extends StatefulWidget {
     super.key,
     String? btnText,
     required this.icon,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
   final Widget? icon;
 
   @override
-  _SmBtnPrimaryWidgetState createState() => _SmBtnPrimaryWidgetState();
+  State<SmBtnPrimaryWidget> createState() => _SmBtnPrimaryWidgetState();
 }
 
 class _SmBtnPrimaryWidgetState extends State<SmBtnPrimaryWidget> {

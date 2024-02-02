@@ -8,12 +8,12 @@ class InitialsWidget extends StatefulWidget {
   const InitialsWidget({
     super.key,
     String? initialText,
-  })  : initialText = initialText ?? 'A';
+  }) : initialText = initialText ?? 'A';
 
   final String initialText;
 
   @override
-  _InitialsWidgetState createState() => _InitialsWidgetState();
+  State<InitialsWidget> createState() => _InitialsWidgetState();
 }
 
 class _InitialsWidgetState extends State<InitialsWidget> {

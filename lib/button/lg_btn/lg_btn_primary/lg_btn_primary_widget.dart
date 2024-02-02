@@ -9,12 +9,12 @@ class LgBtnPrimaryWidget extends StatefulWidget {
   const LgBtnPrimaryWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _LgBtnPrimaryWidgetState createState() => _LgBtnPrimaryWidgetState();
+  State<LgBtnPrimaryWidget> createState() => _LgBtnPrimaryWidgetState();
 }
 
 class _LgBtnPrimaryWidgetState extends State<LgBtnPrimaryWidget> {

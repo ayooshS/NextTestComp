@@ -9,12 +9,12 @@ class MdBtnLinkWidget extends StatefulWidget {
   const MdBtnLinkWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _MdBtnLinkWidgetState createState() => _MdBtnLinkWidgetState();
+  State<MdBtnLinkWidget> createState() => _MdBtnLinkWidgetState();
 }
 
 class _MdBtnLinkWidgetState extends State<MdBtnLinkWidget> {

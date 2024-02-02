@@ -9,12 +9,12 @@ class SmBtnLinkDefWidget extends StatefulWidget {
   const SmBtnLinkDefWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _SmBtnLinkDefWidgetState createState() => _SmBtnLinkDefWidgetState();
+  State<SmBtnLinkDefWidget> createState() => _SmBtnLinkDefWidgetState();
 }
 
 class _SmBtnLinkDefWidgetState extends State<SmBtnLinkDefWidget> {

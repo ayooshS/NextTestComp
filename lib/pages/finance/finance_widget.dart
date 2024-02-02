@@ -10,7 +10,7 @@ class FinanceWidget extends StatefulWidget {
   const FinanceWidget({super.key});
 
   @override
-  _FinanceWidgetState createState() => _FinanceWidgetState();
+  State<FinanceWidget> createState() => _FinanceWidgetState();
 }
 
 class _FinanceWidgetState extends State<FinanceWidget> {

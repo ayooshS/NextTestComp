@@ -18,7 +18,7 @@ class SBDefaultCopyWidget extends StatefulWidget {
   final String btnText;
 
   @override
-  _SBDefaultCopyWidgetState createState() => _SBDefaultCopyWidgetState();
+  State<SBDefaultCopyWidget> createState() => _SBDefaultCopyWidgetState();
 }
 
 class _SBDefaultCopyWidgetState extends State<SBDefaultCopyWidget> {

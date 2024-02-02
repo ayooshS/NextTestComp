@@ -11,7 +11,7 @@ class SourceWidget extends StatefulWidget {
   const SourceWidget({super.key});
 
   @override
-  _SourceWidgetState createState() => _SourceWidgetState();
+  State<SourceWidget> createState() => _SourceWidgetState();
 }
 
 class _SourceWidgetState extends State<SourceWidget> {

@@ -20,7 +20,7 @@ class TopNavBrandWidget extends StatefulWidget {
   final Widget? icon2;
 
   @override
-  _TopNavBrandWidgetState createState() => _TopNavBrandWidgetState();
+  State<TopNavBrandWidget> createState() => _TopNavBrandWidgetState();
 }
 
 class _TopNavBrandWidgetState extends State<TopNavBrandWidget> {

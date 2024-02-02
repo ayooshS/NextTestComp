@@ -10,12 +10,12 @@ class SmBtnBezeledWidget extends StatefulWidget {
   const SmBtnBezeledWidget({
     super.key,
     String? btnText,
-  })  : btnText = btnText ?? 'Apply';
+  }) : btnText = btnText ?? 'Apply';
 
   final String btnText;
 
   @override
-  _SmBtnBezeledWidgetState createState() => _SmBtnBezeledWidgetState();
+  State<SmBtnBezeledWidget> createState() => _SmBtnBezeledWidgetState();
 }
 
 class _SmBtnBezeledWidgetState extends State<SmBtnBezeledWidget> {
